@@ -1,4 +1,4 @@
-__version__ = "0.1.1"
+__version__ = "0.1.1-16.04"
 
 import log, util, logging
 
@@ -7,12 +7,6 @@ log.setup_logging()
 logger = logging.getLogger(__name__)
 
 def main():
-    logger.info("Checking your OS version...")
-    if util.check_os():
-        logger.info("OK")
-    else:
-        logger.critical("You must use Ubuntu 14.04")
-
     if util.not_sudo():
         logger.critical("Restart script as root")
 
